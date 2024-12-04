@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio | Yusma Rahman</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav
+      class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
+    >
+      <a href="#" class="navbar-brand ml-lg-3">
+        <h1 class="m-0 display-5">
+          <span id="tulisan-navbar-atas" class="text-primary kembali-keatas"
+            >My Portfolio</span
+          >
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+        <div class="navbar-nav m-auto py-0">
+          <a href="#home" class="nav-item nav-link active">Home</a>
+          <a href="#about" class="nav-item nav-link">About</a>
+          <a href="#qualification" class="nav-item nav-link">Quality</a>
+          <a href="#qualification2" class="nav-item nav-link">Course</a>
+          <a href="#skill" class="nav-item nav-link">Skill</a>
+          <a href="#service" class="nav-item nav-link">Service</a>
+          <a href="#testimonial" class="nav-item nav-link">Quote</a>
+          <a href="#contact" class="nav-item nav-link">Contact</a>
+          <!--
+                <a href="#testimonial" class="nav-item nav-link">Review</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                
+                -->
+        </div>
+        <a href="https://wa.me/6281958436679" class="btn btn-outline-primary d-none d-lg-block" target="_blank">WhatsApp Me</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Video Modal Start -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src=""
+                id="video"
+                allowscriptaccess="always"
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Video Modal End -->
+
+    <!-- Header Start -->
+    <div
+      class="container-fluid bg-primary d-flex align-items-center mb-5 py-5"
+      id="home"
+      style="min-height: 100vh"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+            <img
+              class="img-fluid w-100 rounded-circle shadow-sm"
+              src="img/profile.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-7 text-center text-lg-left">
+            <h3 class="text-white font-weight-normal mb-3">I'm</h3>
+            <h1
+              class="display-3 text-uppercase text-primary mb-2"
+              style="-webkit-text-stroke: 2px #ffffff"            >
+              Yusma Rahman
+            </h1>
+            <!-- Teks dengan efek typing motion -->
+             <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+
+             <!-- Teks yang akan digunakan oleh Typed.js untuk efek ketikan -->
+            <div class="typed-text d-none">
+              Web Developer, GIS Administrator, Junior Data Analyst
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+              <a href="#about" id="abutme" class="btn btn-outline-light mr-5"
+                >About Me</a>
+              <script>
+                // Fungsi untuk scroll dengan motion khusus
+                function customScroll(target, duration) {
+                  const targetElement = document.querySelector(target);
+                  const startPosition = window.pageYOffset;
+                  const targetPosition =
+                    targetElement.getBoundingClientRect().top +
+                    startPosition -
+                    50;
+                  const distance = targetPosition - startPosition;
+                  let startTime = null;
+
+                  // Animasi scroll
+                  function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(
+                      timeElapsed,
+                      startPosition,
+                      distance,
+                      duration
+                    );
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration)
+                      requestAnimationFrame(animation);
+                  }
+
+                  // Fungsi easing untuk membuat motion lebih halus
+                  function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return (c / 2) * t * t + b;
+                    t--;
+                    return (-c / 2) * (t * (t - 2) - 1) + b;
+                  }
+
+                  requestAnimationFrame(animation);
+                }
+
+                // Menambahkan event listener pada tombol
+                document
+                  .querySelector("#abutme")
+                  .addEventListener("click", function (e) {
+                    e.preventDefault(); // Mencegah default behavior anchor
+                    customScroll("#about", 1000); // Scroll ke #about dalam 1000ms
+                  });
+              </script>
+              <a
+                href="https://drive.google.com/file/d/1Ver5HxRPN4CPaWXF5laboVu3FWlRKdAo/view?usp=sharing"
+                target="_blank"
+                class="btn btn-outline-light"
+                >Download CV</a
+              >
+             
+              <!--<button type="button" class="btn-play" data-toggle="modal"
+                            data-src="https://www.youtube.com/watch?v=AtDCeREQ7OA" data-target="#videoModal">
+                            <span></span>
+                        </button> 
+                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5> -->
+            </div>
+            <div class="mt-5" style="padding-left: 20px;">
+              <p class="typed-text-output-2 d-inline font-weight-lighter text-white"></p>
+              <div class="typed-text-2 d-none">
+                Select Language, Pilih Bahasa
+              </div>
+              <br>
+              <a href="#" class="text-white font-weight-normal ">ENG</a> | 
+              <a href="index-id.html" class="text-white font-weight-normal ">ID</a>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            About
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            About Me
+          </h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-5 pb-4 pb-lg-0">
+            <img class="img-fluid rounded w-100" src="img/about.jpg" alt="" />
+          </div>
+          <div class="col-lg-7">
+            <h3 class="mb-4">GIS Administrator & Web Developer</h3>
+            <p>
+              Hi! I’m <strong>Yusma Rahman</strong>, a GIS Administrator with
+              over six years of experience in spatial data management. My work
+              focuses on ensuring data accuracy, troubleshooting technical
+              issues, and supporting teams through effective training.
+            </p>
+            <p>
+              Currently, I’m expanding my skills in
+              <strong>web development</strong> and
+              <strong>data analytics</strong>, driven by a passion for
+              continuous learning and growth. While I’m just beginning this
+              journey, I’m excited about how these new skills can complement my
+              GIS expertise.
+            </p>
+            <div class="row mb-3">
+              <div class="col-sm-6 py-2">
+                <h6>Name: <span class="text-secondary">Yusma Rahman</span></h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Degree:
+                  <span class="text-secondary"
+                    >Bachelor of Computer Engineering</span
+                  >
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Experience:
+                  <span class="text-secondary"
+                    >6 Years (GIS Administrator)</span
+                  >
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Phone: <span class="text-secondary">+62 819 5843 6679</span>
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Email:
+                  <span class="text-secondary">yusmarahman09@gmail.com</span>
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Freelance: <span class="text-secondary">Available</span>
+                </h6>
+              </div>
+            </div>
+            <a href="https://wa.me/6287816352121" target="_blank" class="btn btn-outline-primary mr-4"
+              >Hire Me</a>
+            <a href="" class="btn btn-outline-primary" id="skroll">Learn More</a>
+
+            <script>
+              // Fungsi untuk scroll dengan motion khusus
+              function customScroll(target, duration) {
+                const targetElement = document.querySelector(target);
+                const startPosition = window.pageYOffset;
+                const targetPosition =
+                  targetElement.getBoundingClientRect().top +
+                  startPosition -
+                  50;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                // Animasi scroll
+                function animation(currentTime) {
+                  if (startTime === null) startTime = currentTime;
+                  const timeElapsed = currentTime - startTime;
+                  const run = ease(
+                    timeElapsed,
+                    startPosition,
+                    distance,
+                    duration
+                  );
+                  window.scrollTo(0, run);
+                  if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                // Fungsi easing untuk membuat motion lebih halus
+                function ease(t, b, c, d) {
+                  t /= d / 2;
+                  if (t < 1) return (c / 2) * t * t + b;
+                  t--;
+                  return (-c / 2) * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+              }
+
+              // Menambahkan event listener pada tombol
+              document
+                .querySelector("#skroll")
+                .addEventListener("click", function (e) {
+                  e.preventDefault(); // Mencegah default behavior anchor
+                  customScroll("#qualification", 1000); // Scroll ke #about dalam 1000ms
+                });
+            </script>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 2px #dee2e6"
+          >
+            Quality
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            Education & Expericence
+          </h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h3 class="mb-4">My Education</h3>
+            <div class="border-left border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">
+                  Computer and Network Engineering
+                </h5>
+                <p class="mb-2">
+                  <strong>SMK Bina Banua Banjarmasin</strong> |
+                  <small>2014 - 2017</small>
+                </p>
+                <p>
+                  I learned the fundamentals of computer networking, including
+                  LAN, MAN, and WAN technologies. I gained hands-on experience
+                  in wireless networking and server management, as well as
+                  proficiency in using MikroTik for network configuration and
+                  maintenance.
+                </p>
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">
+                  Bachelor In Computer Engineering
+                </h5>
+                <p class="mb-2">
+                  <strong>UNISKA Banjarmasin</strong> |
+                  <small>2017 - 2021</small>
+                </p>
+                <p class="mb-5">
+                  In my Bachelor in Computer Engineering, I engaged in
+                  comprehensive coursework covering essential topics such as
+                  basic networking, web development (including HTML, CSS, and
+                  JavaScript), and SQL database management. I graduated with a
+                  GPA of 3.61, achieving a distinction of "Graduated with
+                  Honors."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-4">My Expericence</h3>
+            <div class="border-left border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Junior GIS Administrator</h5>
+                <p class="mb-2">
+                  <strong>CV. Peninsula Abadi</strong> |
+                  <small>2018 - 2021</small>
+                </p>
+                <p>
+                  As a Junior GIS Administrator, I managed small-scale mapping
+                  data, focusing on updates and maintenance to ensure accuracy.
+                  I collaborated with the team to uphold data integrity and
+                  supported project needs with essential GIS tasks.
+                </p>
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Senior GIS Administrator</h5>
+                <p class="mb-2">
+                  <strong>CV. Peninsula Abadi</strong> |
+                  <small>2021 - 2024</small>
+                </p>
+                <p>
+                  As a Senior GIS Administrator, I oversaw thorough data
+                  validation processes to ensure client data accuracy and
+                  completeness. I also led a team of junior administrators,
+                  providing guidance to enhance efficiency and uphold data
+                  quality standards, with a strong focus on consistent quality
+                  assurance.
+                </p>
+                <a
+                href="#"
+                id="viewCertificate5"
+                class="border-bottom border-primary text-decoration-none"
+                >View Certificate</a
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Qualification End -->
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification2">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Courses
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">Courses</h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h3 class="mb-4 mt-5">Online Courses</h3>
+            <div class="border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Database - SQL Track</h5>
+                <p class="mb-2">
+                  <strong>Dqlab.id</strong> | <small><em>Online Data Science Learning Program</em></small>
+                </p>
+                <p>
+                  In the Database SQL Track, I learned the fundamentals of SQL, starting with the SELECT statement for efficient data retrieval. I advanced to using FUNCTIONS and GROUP BY for more complex queries, then explored INNER JOIN and UNION to combine data from multiple tables. Finally, I refined my skills with GROUP BY and HAVING to effectively filter aggregated results.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate"
+                  class="border-bottom border-primary text-decoration-none"
+                  >View Certificate</a
+                >
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">SQL Intermediate</h5>
+                <p class="mb-2">
+                  <strong>Sololearn.com</strong> | <small><em>Free Programming and Coding Education App</em></small>
+                </p>
+                <p>
+                  In the Intermediate SQL course, I learned SQL fundamentals, including filtering data, using functions, and writing subqueries. I explored JOINs to combine tables, performed various table operations, and worked on practical real-world challenges to further apply and strengthen these essential skills.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate3"
+                  class="border-bottom border-primary text-decoration-none"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-4 mt-5">Offline Courses & Activity</h3>
+            <div class="border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">English Conversation</h5>
+                <p class="mb-2">
+                  <strong>LIA Banjarmasin</strong> | <small>2018 - 2023</small>
+                </p>
+                <p>
+                  In the English Conversation course, I learned basic speaking skills in the class, starting with greetings and introductions. We focused on small talk, like discussing the weather and hobbies. I practiced asking questions and expressing opinions. The course also helped improve my listening skills and taught me how to keep conversations flowing smoothly.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate2"
+                  class="border-bottom border-primary text-decoration-none"
+                  >View Certificate</a
+                >
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Volunteering to Teach English in Pelambuan</h5>
+                <p class="mb-2">
+                  <strong>Borneo Urban Lab</strong> | <small>2022 - 2023</small>
+                </p>
+                <p>
+                  I am part of a team of volunteers teaching English to children in Pelambuan, South Kalimantan. We share our knowledge to help them speak English. This journey has shown us how diligent, hardworking, and enthusiastic they are in learning this language, and we're grateful to contribute to their growth.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate4"
+                  class="border-bottom border-primary text-decoration-none"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Qualification End -->
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Skills
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            My Skills
+          </h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">GIS Data Management with QGIS</h6>
+                <h6 class="font-weight-bold">90%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">FPV Drone Pilot</h6>
+                <h6 class="font-weight-bold">85%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="85"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">Microsoft Office Suite</h6>
+                <h6 class="font-weight-bold">80%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">Basic Networking</h6>
+                <h6 class="font-weight-bold">80%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">
+                  HTML, CSS, PHP, Bootstrap, Laravel
+                </h6>
+                <h6 class="font-weight-bold">80%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-dark"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">Python, SQL, Tableau</h6>
+                <h6 class="font-weight-bold">75%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skill End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="service">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Freelance
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            My Services
+          </h1>
+        </div>
+        <div class="row pb-3">
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-film service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Drone Footage</h4>
+            </div>
+            <p>
+              I specialize in <strong>FPV drone</strong> footage that offers an
+              immersive experience for your company and projects.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup1', event)"
+              >Read More</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Web Developer</h4>
+            </div>
+            <p>
+              My focus is on
+              <strong>user-friendly, responsive designs</strong> that capture
+              your brand's essence and engage your audience.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup2', event)"
+              >Read More</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-layer-group service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">GIS Data Management</h4>
+            </div>
+            <p>
+              Specializing in <strong>GIS management</strong>, I offer expert
+              services in data cleansing and management within QGIS.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup3', event)"
+              >Read More</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-table service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Data Entry</h4>
+            </div>
+            <p>
+              Boost your business efficiency with fast, accurate, and reliable
+              <strong>data entry</strong> services, driving measurable results
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup4', event)"
+              >Read More</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-camera service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Product Photography</h4>
+            </div>
+            <p>
+              Simple, clear, and eye-catching
+              <strong>product photos</strong> that make your items shine and
+              stand out beautifully, effortlessly attracting attention.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup5', event)"
+              >Read More</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Content Creating</h4>
+            </div>
+            <p>
+              <strong>Create engaging content</strong> for your brand, from
+              videos to social media posts, to connect with your audience
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup6', event)"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Portfolio Start
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Gallery
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            My Portfolio
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center mb-2">
+            <ul class="list-inline mb-4" id="portfolio-flters">
+              <li
+                class="btn btn-sm btn-outline-primary m-1 active"
+                data-filter="*"
+              >
+                All
+              </li>
+              <li
+                class="btn btn-sm btn-outline-primary m-1"
+                data-filter=".first"
+              >
+                Design
+              </li>
+              <li
+                class="btn btn-sm btn-outline-primary m-1"
+                data-filter=".second"
+              >
+                Development
+              </li>
+              <li
+                class="btn btn-sm btn-outline-primary m-1"
+                data-filter=".third"
+              >
+                Marketing
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row portfolio-container">
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-1.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-2.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-3.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-4.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-5.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-6.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Testimonial Start-->
+
+    <div class="container-fluid py-5" id="testimonial">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Quotes
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            Quotes to Inspire
+          </h1>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="owl-carousel testimonial-carousel">
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  Feeling lost at the start is something everyone faces. What truly matters is the determination to keep moving forward with consistency and commitment
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/testimonial-1.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Yusma</h5>
+                <a href="https://www.instagram.com/yusmafrlnc/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> yusmafrlnc</span>
+                </a>
+                
+              </div>
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  Work is not just about earning; it’s about creating something meaningful. It’s about finding purpose in every task, learning from the journey, and leaving a lasting impact on others
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/testimonial-2.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Rahmatillah</h5>
+                <a href="https://www.instagram.com/tlhrahmat/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> tlhrahmat</span>
+                </a>
+              </div>
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  A job is not just a task, it’s an opportunity to grow, learn, and make a difference. It’s a platform where you can challenge yourself, develop new skills, and leave a positive impact on the world around you
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/testimonial-3.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Aziz</h5>
+                <a href="https://www.instagram.com/aaziiz.z/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> aaziiz.z</span>
+                </a>
+              </div>
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  When passion and skill align, work becomes not just a necessity, but a fulfilling way of life. It transforms into something that inspires growth, fuels creativity, and adds meaning to every day
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/yoga.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Yoga</h5>
+                <a href="https://www.instagram.com/yogayuliga/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> yogayuliga</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Blog Start
+    <div class="container-fluid pt-5" id="blog">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Latest Blog</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            </div>
+            <div class="row g-5">
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <h2 class="mb-3 sembunyi">Let's get in touch</h3>
+                  <p class="mb-4">Let’s start a conversation! Whether you have questions, need more information, or are looking for assistance with your project, get in touch with us today. We’re here to help and excited to discuss how our services can make a positive impact on your goals.</p>
+                  <div class="d-flex mb-4">
+                      <div class="flex-shrink-0 btn-bulat rounded-circle bg-primary text-white">
+                          <i class="fa fa-phone-alt"></i>
+                      </div>
+                      <div class="ms-1">
+                          <p class="mb-1 manual-padding-kiri">Call Me</p>
+                          <h5 class="mb-0 manual-padding-kiri">+62 819 5843 6679 </h5>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-4">
+                      <div class="flex-shrink-0 btn-bulat rounded-circle bg-primary text-white">
+                          <i class="fa fa-envelope"></i>
+                      </div>
+                      <div class="ms-3">
+                          <p class="mb-1 manual-padding-kiri">Mail Me</p>
+                          <h5 class="mb-0 manual-padding-kiri">yusmarahman09@gmail.com</h5>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-0">
+                      <div class="flex-shrink-0 btn-bulat rounded-circle bg-primary text-white">
+                          <i class="fab fa-instagram"></i>
+                      </div>
+                      <div class="ms-3">
+                          <p class="mb-1 manual-padding-kiri">My Instagram</p>
+                          <h5 class="mb-0 manual-padding-kiri">@yusmafrlnc</h5>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <form>
+                    <div class="row g-3">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63730.137704589164!2d114.55301297691074!3d-3.3171349055801502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de4209aa1eec961%3A0x26030bfcc09204d2!2sBanjarmasin%2C%20Banjarmasin%20City%2C%20South%20Kalimantan!5e0!3m2!1sen!2sid!4v1731510743726!5m2!1sen!2sid" 
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="top" >
+                        </iframe>
+                    </div>
+                </form>
+            </div>            
+          </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5"
+    >
+      <div class="container text-center py-5">
+        <div class="d-flex justify-content-center mb-4">
+          <a class="btn btn-light btn-social mr-2" href="https://creativeloopid.blogspot.com/"
+            ><i class="fa-brands fa-blogger"></i></a>
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="https://www.facebook.com/yusma.gaul"
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="https://www.linkedin.com/in/yusmarahman09/"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-light btn-social"
+            href="https://www.instagram.com/yusmafrlnc/"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+       <!----> <div class="d-flex justify-content-center mb-3">
+          <a class="text-white" href="#">Privacy</a>
+          <span class="px-3">|</span>
+          <a class="text-white" href="#">Terms</a>
+          <span class="px-3">|</span>
+          <a class="text-white" href="#">FAQs</a>
+          <span class="px-3">|</span>
+          <a class="text-white" href="#">Help</a>
+        </div>
+        <p class="m-0">
+          &copy;
+          <a class="text-white font-weight-bold" href="#">YusmaWork.com</a>. All
+          Rights Reserved. Designed by
+          <a class="text-white font-weight-bold" href="https://htmlcodex.com"
+            >HTML Codex</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+ <!-- Pop-up for Drone  -->
+<div class="popup" id="popup1">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup1')">&times;</span>
+    <h2>Drone Footage</h2>
+    <!-- Menambahkan iframe untuk video YouTube -->
+    <div class="popup-video">
+      <iframe
+        id="youtube-video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/2oZ1GreRJxE?si=a-roy5FbBH7cNYfI"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p>
+      As someone who is still honing my skills in FPV drone footage, I
+          specialize in capturing stunning aerial shots for property and company
+          profile projects. Using advanced drone equipment, I focus on
+          delivering smooth, high-quality footage that highlights the unique
+          features of real estate properties and provides an engaging
+          perspective for businesses. Whether it's showcasing a luxurious
+          property for sale or creating an impressive company profile, my goal
+          is to create visually captivating footage that enhances your project’s
+          impact.
+    </p>
+    <a href="img/drone1.jpg" target="_blank">
+      <img src="img/drone1.jpg" class="popup-image" alt="Drone Image" />
+    </a>
+    <p>
+      In the process, I focus on framing the best angles, capturing sweeping
+      views, and showcasing details that are often missed with traditional
+      photography. For property projects, I make sure to highlight key
+      selling points such as the layout, surrounding landscape, and overall
+      aesthetic. For company profiles, I aim to tell your brand's story
+      through aerial visuals that emphasize your business location,
+      facilities, and environment. While I am still learning, I ensure every
+      shot is professionally executed to meet the highest standards.
+    </p>
+    <a href="img/drone2.JPG" target="_blank">
+      <img src="img/drone2.JPG" class="popup-image" alt="Drone Image" />
+    </a>
+    <p>
+      I believe that FPV drone footage offers a dynamic and eye-catching way
+          to present properties and businesses. That’s why I work closely with
+          clients to understand their vision and provide footage that aligns
+          with their goals. As I continue to refine my skills, I am dedicated to
+          offering you exceptional aerial shots that will elevate your property
+          listings and company profiles.
+    </p>
+    <p>
+      If you're interested in exploring more of our videos,
+      <a
+        href="https://www.youtube.com/@iyusfpv"
+        class="border-bottom border-primary"
+        target="_blank"
+        ><strong>click here.</strong></a
+      >
+    </p>
+    
+    <!-- Tombol Close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup1')" class="btn btn-secondary" style="width: 200px;">Close</button>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Pop-up for web Developer  -->
+    <div class="popup" id="popup2">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <h2>Web Developer</h2>
+        <img src="img/penin-1.JPG" alt="Drone Project" class="popup-image" />
+        <p>
+          As a web developer who is still learning, I focus on creating
+          user-friendly websites that are accessible on various devices. I
+          strive to ensure that every project I work on features a clean and
+          modern design, providing a pleasant user experience. Every website I
+          create is designed with easy navigation in mind, whether for new
+          visitors or regular users.
+        </p>
+        <img src="img/penin-3.JPG" alt="Drone Project" class="popup-image" />
+        <p>
+          In the development process, I work with various technologies to build
+          both the front-end and back-end of the site. Although I am still
+          learning, I ensure that the sites I build are fast, responsive, and
+          function smoothly. I also continuously seek ways to optimize
+          performance and enhance the user experience, whether it's for a
+          personal blog, a business website, or an online store.
+        </p>
+        <img src="img/penin-2.JPG" alt="Drone Project" class="popup-image" />
+        <p>
+          I believe that every website should be tailored to meet the specific
+          needs of its users. That's why I collaborate with clients to
+          understand their goals and create solutions that fit. I am committed
+          to continuously improving my skills, so I can deliver better results
+          and help you build a strong online presence.
+        </p>
+        <h3>Recent Projects:</h3>
+        <ul>
+          <li>
+            <strong>Company Profile Website :</strong>
+            <a href="https://yusma1122.github.io/peninsula/" class="border-bottom border-primary text-decoration-none" target="_blank">Peninsula Abadi Company Profile</a>
+          </li>
+          <li>
+            <strong>Wasaka Museum :</strong>
+            <a href="https://yusma1122.github.io/wasaka-museum" class="border-bottom border-primary text-decoration-none" target="_blank">Wasaka Museum Website</a>
+          </li>
+        </ul>
+        
+        <!-- Tombol Close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup2')" class="btn btn-secondary" style="width: 200px;">Close</button>
+    </div>
+
+      </div>
+    </div>
+
+    <!-- Pop-up for GIS Adm  -->
+    <div class="popup" id="popup3">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <h2>GIS Management</h2>
+        <a href="img/GIS-1.JPG" target="_blank">
+          <img src="img/GIS-1.JPG" class="popup-image" alt="GIS Image" />
+        </a>
+        <p>
+          As someone who is still honing my skills in GIS management, I focus on
+          organizing and cleaning GIS data to ensure it is accurate and ready
+          for analysis. I work with a variety of tools to help clean, organize,
+          and validate geographic information, ensuring that all the data I
+          handle is both reliable and well-structured. My goal is to provide you
+          with clean, usable data that can be easily integrated into any GIS
+          projects.
+        </p>
+        <p>
+          In the process, I focus on data cleaning tasks such as removing
+          duplicates, correcting errors, and standardizing formats. This helps
+          improve the overall quality of the data, making it ready for use in
+          decision-making, mapping, and other spatial analyses. While I am still
+          learning, I am committed to maintaining high standards and
+          continuously improving my techniques to ensure the best results.
+        </p>
+        <a href="img/GIS-2.jpg" target="_blank">
+          <img src="img/GIS-2.jpg" class="popup-image" alt="GIS Image" />
+        </a>
+        <p>
+          I believe that accurate and well-managed GIS data is crucial for
+          effective decision-making. That's why I collaborate closely with
+          clients to understand their specific needs and ensure that the data I
+          provide fits perfectly into their workflows. I am passionate about
+          refining my skills in GIS management, so I can help you make the most
+          of your geographic data and optimize its potential.
+        </p>
+        <h3>Recent Projects:</h3>
+        <ul>
+          <li>
+            <strong>Local Policy Project :</strong> 
+            <a
+                href="#"
+                id="viewCertificate6"
+                class="border-bottom border-primary text-decoration-none"
+                >Middlesbrough Emerging Local Plan</a>
+          </li>
+          <li>
+            <strong>Site Allocation Project :</strong> 
+            <a href="img/doc/Liverpool SA.pdf" class="border-bottom border-primary text-decoration-none">Liverpool Site Allocation</a>
+          </li>
+        </ul>
+
+        <!-- Tombol Close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup3')" class="btn btn-secondary" style="width: 200px;">Close</button>
+    </div>
+
+      </div>
+    </div>
+
+    <!-- Pop-up Data Entry  -->
+    <div class="popup" id="popup4">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup4')">&times;</span>
+        <h2>Data Entry</h2>
+        <a href="img/popup4.JPG" target="_blank">
+          <img src="img/popup4.JPG" class="popup-image" alt="Data Entry" />
+        </a>
+        <p>
+          I am dedicated to developing my skills in data entry, ensuring that
+          the data I handle is accurate, well-organized, and ready for further
+          processing. My work centers on carefully inputting and maintaining
+          data with attention to detail, providing reliable information to
+          support larger projects.
+        </p>
+        <a href="img/data-entry1.JPG" target="_blank">
+          <img src="img/data-entry1.JPG" class="popup-image" alt="Data Entry" />
+        </a>
+        <p>
+          In my data entry process, I focus on accuracy by thoroughly verifying
+          each entry, cross-referencing information, and adhering to established
+          data standards. This approach helps to minimize errors and ensures
+          that all information is consistently formatted, making it easier to
+          use for analysis, reporting, and decision-making. While still refining
+          my skills, I prioritize accuracy and consistency, continuously
+          improving my techniques to deliver the best results.
+        </p>
+        <a href="img/data-entry2.JPG" target="_blank">
+          <img src="img/data-entry2.JPG" class="popup-image" alt="Data Entry" />
+        </a>
+        <p>
+          I believe that well-managed data entry is a strong foundation for any
+          data-driven project. To achieve this, I collaborate closely with
+          clients to understand their specific requirements, ensuring that the
+          data I provide integrates smoothly into their workflows. Developing my
+          data entry skills remains a top priority, allowing me to effectively
+          contribute to your project and help maximize the value of your data.
+        </p>
+        <h3>Recent Projects:</h3>
+        <ul>
+          <li>
+            <a
+              href="https://docs.google.com/spreadsheets/d/12y6jOpVtpkYC4eFXOmj269ykW7VwGPXCM-STXsF_1Wg/edit?gid=45035415#gid=45035415"
+              target="_blank"
+              ><strong>UK Council Boundary Extraction</strong></a
+            >
+            Extracting boundary data from various councils across the UK for
+            accurate spatial analysis and mapping.
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/spreadsheets/d/12y6jOpVtpkYC4eFXOmj269ykW7VwGPXCM-STXsF_1Wg/edit?gid=1443587580#gid=1443587580"
+              target="_blank"
+              ><strong>Manual Data Scraping from UK Websites</strong></a
+            >
+            The process of manually collecting data from multiple websites in
+            the UK, with thorough checks to ensure that the extracted data is
+            accurate and meets the analysis requirements.
+          </li>
+        </ul>
+
+        <!-- Tombol Close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup4')" class="btn btn-secondary" style="width: 200px;">Close</button>
+    </div>
+
+
+      </div>
+    </div>
+
+    <!-- Pop-up for Product Photo  -->
+    <div class="popup" id="popup5">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup5')">&times;</span>
+        <h2>Product Photography</h2>
+
+        <!-- Slideshow Container -->
+
+        <div class="product-slideshow-container">
+          <div class="product-slide product-slide-1">
+            <!-- Slide pertama untuk slideshow 1 -->
+            <img src="img/nike1.JPG" class="popup-image" alt="Nike Product 1" />
+            <div class="product-text">Nike Blazer Low 77 - Black</div>
+          </div>
+          <div class="product-slide product-slide-1">
+            <!-- Slide pertama untuk slideshow 1 -->
+            <img src="img/nike2.JPG" class="popup-image" alt="Nike Product 1" />
+            <div class="product-text">Nike Blazer Low 77 - Black</div>
+          </div>
+          <div class="product-slide product-slide-1">
+            <!-- Slide pertama untuk slideshow 1 -->
+            <img src="img/nike3.JPG" class="popup-image" alt="Nike Product 1" />
+            <div class="product-text">Nike Blazer Low 77 - Black</div>
+          </div>
+          <!-- Slide lainnya untuk slideshow 1 -->
+          <a class="product-prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+          <a class="product-next" onclick="plusSlides(1, 1)">&#10095;</a>
+          <div class="product-slide-number" id="slide-number-1"></div>
+        </div>
+
+        <p>
+          Though product photography is not my primary field of expertise, it’s
+          something I’m passionate about and enjoy exploring. What started as a
+          hobby has now evolved into an opportunity to capture your products in
+          a way that highlights their best features. I focus on creating clean,
+          crisp, and engaging photos that showcase your products in the most
+          appealing way.
+        </p>
+        <p>
+          I take great care in ensuring every image is well-composed, with
+          attention to lighting and details that will make your products stand
+          out. While I’m still learning and refining my skills, I’m committed to
+          delivering images that are both beautiful and effective for your
+          marketing or sales needs.
+        </p>
+
+        <div class="product-slideshow-container">
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi1.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi2.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi3.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi4.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi5.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <!-- Slide lainnya untuk slideshow 1 -->
+          <a class="product-prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+          <a class="product-next" onclick="plusSlides(1, 2)">&#10095;</a>
+          <div class="product-slide-number" id="slide-number-2"></div>
+        </div>
+
+        <p>
+          For me, it’s about creating photos that help your products shine,
+          whether it’s for an online store, social media, or other promotional
+          materials. I’m always open to new challenges and collaborations,
+          bringing my creative eye to each shoot with enthusiasm.
+        </p>
+        <p>
+          By working together, I can help bring your products to life through
+          photography, and who knows—what started as a hobby might just turn
+          into something more!
+        </p>
+
+        <div class="product-slideshow-container">
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch1.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch2.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch3.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch4.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <!-- Slide lainnya untuk slideshow 1 -->
+          <a class="product-prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+          <a class="product-next" onclick="plusSlides(1, 3)">&#10095;</a>
+          <div class="product-slide-number" id="slide-number-3"></div>
+        </div>
+
+        <h3>Recent Projects:</h3>
+        <ul>
+          <li><strong>Nike Blezer Low 77</strong> : Shoe</li>
+          <li><strong>PING Golf Hat</strong> : Hat</li>
+          <li><strong>Torch Pouch</strong> : Bag</li>
+        </ul>
+
+        <!-- Tombol Close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup5')" class="btn btn-secondary" style="width: 200px;">Close</button>
+    </div>
+
+
+      </div>
+    </div>
+
+    <!-- Pop-up for Content Creating  -->
+    <div class="popup" id="popup6">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup6')">&times;</span>
+        <h2>Content Creating</h2>
+        <a href="img/content-creation.png" target="_blank">
+          <img
+            src="img/content-creation.png"
+            class="popup-image"
+            alt="Content Creating"
+          />
+        </a>
+        <p>
+          As someone who is still honing my skills in content creation as a
+          hobby, I focus on developing engaging and well-structured content that
+          resonates with readers and reflects my personal interests. While I’m
+          not a professional in this field, I take great pleasure in
+          experimenting with different types of content and continuously
+          improving my craft. My goal is to create content that tells a story
+          and captures the attention of those who come across it.
+        </p>
+        <a href="img/content-creation2.png" target="_blank">
+          <img
+            src="img/content-creation2.png"
+            class="popup-image"
+            alt="Content Creating"
+          />
+        </a>
+        <p>
+          In the process, I enjoy brainstorming ideas, writing compelling posts,
+          and editing my work to make it as polished as possible. I create
+          content that is meaningful to me and, I hope, to my readers as well.
+          Although I’m still learning, I’m passionate about refining my approach
+          and consistently producing new, interesting blog posts.
+        </p>
+        <a href="img/content-creation3.png" target="_blank">
+          <img
+            src="img/content-creation3.png"
+            class="popup-image"
+            alt="Content Creating"
+          />
+        </a>
+        <p>
+          I believe that sharing ideas and experiences through writing can
+          create valuable connections with others. That’s why I’ve built a blog
+          where I regularly post interesting and thoughtful articles that
+          reflect my interests and creativity. You can explore my journey and
+          see the work I’m proud of at
+          <a
+            href="https://creativeloopid.blogspot.com/"
+            class="border-bottom border-primary"
+            target="_blank"
+            >Creative Loop ID</a
+          >. I’m excited to continue exploring content creation and sharing my
+          passion with others as I grow in this hobby.
+        </p>
+        <h3>Recent Projects:</h3>
+        <ul>
+          <li>
+            <a href="https://creativeloopid.blogspot.com/">
+              <strong>Tech Blog</strong> 
+            </a>
+            : I run a tech blog where I share
+            insights, reviews, and tips on various tech topics. Passionate about
+            technology, I aim to make it accessible and engaging for my readers.
+            Check it out at
+            <a
+              href="https://creativeloopid.blogspot.com/"
+              class="border-bottom border-primary"
+              >Creative Loop ID.</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tombol Close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup6')" class="btn btn-secondary" style="width: 200px;">Close</button>
+    </div>
+
+      </div>
+    </div>
+
+    <!--Ini adalah untuk slide gambar-->
+
+    <!-- Modal Slide Sertifikat Responsive Web Design-->
+    <div
+      class="modal fade"
+      id="certificateModal"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img
+              src="img/sertifikat/dqlab.jpg"
+              alt="Certificate"
+              class="img-fluid"
+            />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat LIA Conversation -->
+    <div
+      class="modal fade"
+      id="certificateModal2"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel2">Certificate LIA Conversation in English</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/LIA Yusma.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat kada tahu -->
+    <div
+      class="modal fade"
+      id="certificateModal3"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/Techforeveryone.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat -->
+    <div
+      class="modal fade"
+      id="certificateModal4"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/pelambuan.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat GIS ADministrator -->
+    <div
+      class="modal fade"
+      id="certificateModal5"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/gis.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Projek GIS 1 -->
+    <div
+      class="modal fade"
+      id="certificateModal6"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Middlesbrough Emerging Local Plan</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/Middlesborough.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!--Online-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

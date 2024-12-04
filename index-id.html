@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio | Yusma Rahman</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav
+      class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
+    >
+      <a href="#" class="navbar-brand ml-lg-3">
+        <h1 class="m-0 display-5">
+          <span id="tulisan-navbar-atas" class="text-primary kembali-keatas"
+            >Portofolio Saya</span
+          >
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+        <div class="navbar-nav m-auto py-0">
+          <a href="#home" class="nav-item nav-link active">Home</a>
+          <a href="#about" class="nav-item nav-link">Tentang</a>
+          <a href="#qualification" class="nav-item nav-link">Kualitas</a>
+          <a href="#qualification2" class="nav-item nav-link">Aktivitas</a>
+          <a href="#skill" class="nav-item nav-link">Skill</a>
+          <a href="#service" class="nav-item nav-link">Layanan</a>
+          <a href="#testimonial" class="nav-item nav-link">Quote</a>
+          <a href="#contact" class="nav-item nav-link">Kontak</a>
+          <!--
+                <a href="#testimonial" class="nav-item nav-link">Review</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                
+                -->
+        </div>
+        <a href="https://wa.me/6281958436679" class="btn btn-outline-primary d-none d-lg-block" target="_blank">WhatsApp Saya</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Video Modal Start -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src=""
+                id="video"
+                allowscriptaccess="always"
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Video Modal End -->
+
+    <!-- Header Start -->
+    <div
+      class="container-fluid bg-primary d-flex align-items-center mb-5 py-5"
+      id="home"
+      style="min-height: 100vh"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+            <img
+              class="img-fluid w-100 rounded-circle shadow-sm"
+              src="img/profile.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-7 text-center text-lg-left">
+            <h3 class="text-white font-weight-normal mb-3">Saya</h3>
+            <h1
+              class="display-3 text-uppercase text-primary mb-2"
+              style="-webkit-text-stroke: 2px #ffffff"            >
+              Yusma Rahman
+            </h1>
+            <!-- Teks dengan efek typing motion -->
+             <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+
+             <!-- Teks yang akan digunakan oleh Typed.js untuk efek ketikan -->
+            <div class="typed-text d-none">
+              Web Developer, GIS Administrator, Junior Data Analyst
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+              <a href="#about" id="abutme" class="btn btn-outline-light mr-5"
+                >About Me</a>
+              <script>
+                // Fungsi untuk scroll dengan motion khusus
+                function customScroll(target, duration) {
+                  const targetElement = document.querySelector(target);
+                  const startPosition = window.pageYOffset;
+                  const targetPosition =
+                    targetElement.getBoundingClientRect().top +
+                    startPosition -
+                    50;
+                  const distance = targetPosition - startPosition;
+                  let startTime = null;
+
+                  // Animasi scroll
+                  function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(
+                      timeElapsed,
+                      startPosition,
+                      distance,
+                      duration
+                    );
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration)
+                      requestAnimationFrame(animation);
+                  }
+
+                  // Fungsi easing untuk membuat motion lebih halus
+                  function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return (c / 2) * t * t + b;
+                    t--;
+                    return (-c / 2) * (t * (t - 2) - 1) + b;
+                  }
+
+                  requestAnimationFrame(animation);
+                }
+
+                // Menambahkan event listener pada tombol
+                document
+                  .querySelector("#abutme")
+                  .addEventListener("click", function (e) {
+                    e.preventDefault(); // Mencegah default behavior anchor
+                    customScroll("#about", 1000); // Scroll ke #about dalam 1000ms
+                  });
+              </script>
+              <a
+                href="https://drive.google.com/file/d/1t18DIT6MC-YA-gcMm3yJQvO2bHSt9A2P/view?usp=sharing"
+                target="_blank"
+                class="btn btn-outline-light"
+                >Download CV</a
+              >
+             
+              <!--<button type="button" class="btn-play" data-toggle="modal"
+                            data-src="https://www.youtube.com/watch?v=AtDCeREQ7OA" data-target="#videoModal">
+                            <span></span>
+                        </button> 
+                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5> -->
+            </div>
+            <div class="mt-5" style="padding-left: 20px;">
+              <p class="typed-text-output-2 d-inline font-weight-lighter text-white"></p>
+              <div class="typed-text-2 d-none">
+                Select Language, Pilih Bahasa
+              </div>
+              <br>
+              <a href="index.html" class="text-white font-weight-normal ">ENG</a> | 
+              <a href="#" class="text-white font-weight-normal ">IND</a>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Tentang
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            Tentang Saya
+          </h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-5 pb-4 pb-lg-0">
+            <img class="img-fluid rounded w-100" src="img/about.jpg" alt="" />
+          </div>
+          <div class="col-lg-7">
+            <h3 class="mb-4">GIS Administrator & Web Developer</h3>
+            <p>
+              Halo! Saya Yusma Rahman, seorang <strong>GIS Administrator</strong> dengan pengalaman lebih dari enam tahun dalam manajemen data spasial. Pekerjaan saya berfokus pada memastikan akurasi data, menyelesaikan masalah teknis, dan mendukung tim melalui pelatihan yang efektif.
+            </p>
+            <p>
+              Saat ini, saya sedang mengembangkan keterampilan di bidang pengembangan <strong>web</strong> dan <strong>analitik data</strong>, didorong oleh hasrat untuk terus belajar dan berkembang. Meskipun saya baru memulai perjalanan ini, saya sangat antusias dengan bagaimana keterampilan baru ini dapat melengkapi keahlian GIS saya.
+            </p>
+            <div class="row mb-3">
+              <div class="col-sm-6 py-2">
+                <h6>Nama: <span class="text-secondary">Yusma Rahman</span></h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Sarjana:
+                  <span class="text-secondary"
+                    >S1 Teknik Informatika</span
+                  >
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Pengalaman:
+                  <span class="text-secondary"
+                    >6 Tahun (GIS Administrator)</span
+                  >
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Telepon: <span class="text-secondary">+62 819 5843 6679</span>
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Email:
+                  <span class="text-secondary">yusmarahman09@gmail.com</span>
+                </h6>
+              </div>
+              <div class="col-sm-6 py-2">
+                <h6>
+                  Freelance: <span class="text-secondary">Available</span>
+                </h6>
+              </div>
+            </div>
+            <a href="https://wa.me/6287816352121" target="_blank" class="btn btn-outline-primary mr-4"
+              >Hubungi Saya</a>
+            <a href="" class="btn btn-outline-primary" id="skroll">Pelajari Lebih Lanjut</a>
+
+            <script>
+              // Fungsi untuk scroll dengan motion khusus
+              function customScroll(target, duration) {
+                const targetElement = document.querySelector(target);
+                const startPosition = window.pageYOffset;
+                const targetPosition =
+                  targetElement.getBoundingClientRect().top +
+                  startPosition -
+                  50;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                // Animasi scroll
+                function animation(currentTime) {
+                  if (startTime === null) startTime = currentTime;
+                  const timeElapsed = currentTime - startTime;
+                  const run = ease(
+                    timeElapsed,
+                    startPosition,
+                    distance,
+                    duration
+                  );
+                  window.scrollTo(0, run);
+                  if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                // Fungsi easing untuk membuat motion lebih halus
+                function ease(t, b, c, d) {
+                  t /= d / 2;
+                  if (t < 1) return (c / 2) * t * t + b;
+                  t--;
+                  return (-c / 2) * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+              }
+
+              // Menambahkan event listener pada tombol
+              document
+                .querySelector("#skroll")
+                .addEventListener("click", function (e) {
+                  e.preventDefault(); // Mencegah default behavior anchor
+                  customScroll("#qualification", 1000); // Scroll ke #about dalam 1000ms
+                });
+            </script>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 2px #dee2e6"
+          >
+            Kualitas
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            Pendidikan & Pengalaman
+          </h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h3 class="mb-4">Riwayat Pendidikan</h3>
+            <div class="border-left border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">
+                  Teknik Komputer dan Jaringan
+                </h5>
+                <p class="mb-2">
+                  <strong>SMK Bina Banua Banjarmasin</strong> |
+                  <small>2014 - 2017</small>
+                </p>
+                <p>
+                  Saya mempelajari dasar-dasar jaringan komputer, termasuk teknologi LAN, MAN, dan WAN. Saya juga mendapatkan pengalaman langsung dalam jaringan nirkabel dan manajemen server, serta menguasai penggunaan MikroTik untuk konfigurasi dan pemeliharaan jaringan.
+                </p>
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">
+                  S1 Teknik Informatika
+                </h5>
+                <p class="mb-2">
+                  <strong>UNISKA Banjarmasin</strong> |
+                  <small>2017 - 2021</small>
+                </p>
+                <p class="mb-5">
+                  Dalam program Sarjana Teknik Komputer saya, saya mengikuti berbagai mata kuliah yang mencakup topik-topik penting seperti jaringan dasar, pengembangan web (termasuk HTML, CSS, dan JavaScript), serta manajemen basis data SQL. Saya lulus dengan IPK 3,61 dan meraih predikat "Lulus dengan Pujian."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-4">Pengalaman Kerja</h3>
+            <div class="border-left border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Junior GIS Administrator</h5>
+                <p class="mb-2">
+                  <strong>CV. Peninsula Abadi</strong> |
+                  <small>2018 - 2021</small>
+                </p>
+                <p>
+                  Sebagai <strong>Junior GIS Administrator</strong>, saya mengelola data pemetaan skala kecil, dengan fokus pada pembaruan dan pemeliharaan untuk memastikan akurasi. Saya bekerja sama dengan tim untuk menjaga integritas data dan mendukung kebutuhan proyek dengan tugas-tugas GIS yang penting.
+                </p>
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Senior GIS Administrator</h5>
+                <p class="mb-2">
+                  <strong>CV. Peninsula Abadi</strong> |
+                  <small>2021 - 2024</small>
+                </p>
+                <p>
+                  Sebagai <strong>Senior GIS Administrator</strong>, saya mengawasi proses validasi data secara menyeluruh untuk memastikan akurasi dan kelengkapan data klien. Saya juga memimpin tim administrator junior, memberikan bimbingan untuk meningkatkan efisiensi dan menjaga standar kualitas data, dengan fokus kuat pada jaminan kualitas yang konsisten.
+                </p>
+                <a
+                href="#"
+                id="viewCertificate5"
+                class="border-bottom border-primary text-decoration-none"
+                >Tampilkan Sertifikat</a
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Qualification End -->
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification2">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Aktifitas
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">Aktifitas Tambahan</h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h3 class="mb-4 mt-5">Kursus Online</h3>
+            <div class="border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Database - SQL Track</h5>
+                <p class="mb-2">
+                  <strong>Dqlab.id</strong> | <small><em>Program Pembelajaran Data Sains Online</em></small>
+                </p>
+                <p>
+                  Dalam Program <strong>SQL Database</strong>, saya mempelajari dasar-dasar SQL, dimulai dengan pernyataan SELECT untuk pengambilan data yang efisien. Saya melanjutkan untuk menggunakan FUNCTION dan GROUP BY untuk kueri yang lebih kompleks, kemudian menjelajahi INNER JOIN dan UNION untuk menggabungkan data dari beberapa tabel. Akhirnya, saya mengasah keterampilan saya dengan GROUP BY dan HAVING untuk menyaring hasil agregat dengan efektif.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate"
+                  class="border-bottom border-primary text-decoration-none"
+                  >Tampilkan Sertifikat</a
+                >
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">SQL Intermediate</h5>
+                <p class="mb-2">
+                  <strong>Sololearn.com</strong> | <small><em>Aplikasi Gratis Untuk Pelajaran Programming dan Coding</em></small>
+                </p>
+                <p>
+                  Dalam kursus <strong>SQL Intermediate</strong>, saya mempelajari dasar-dasar SQL, termasuk penyaringan data, penggunaan fungsi, dan penulisan subquery. Saya menjelajahi JOIN untuk menggabungkan tabel, melakukan berbagai operasi tabel, dan mengerjakan tantangan dunia nyata yang praktis untuk lebih menerapkan dan memperkuat keterampilan penting ini.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate3"
+                  class="border-bottom border-primary text-decoration-none"
+                  >Tampilkan Sertifikat</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-4 mt-5">Aktifitas Offline</h3>
+            <div class="border-primary pt-2 pl-4 ml-2">
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">English Conversation</h5>
+                <p class="mb-2">
+                  <strong>LIA Banjarmasin</strong> | <small>2018 - 2023</small>
+                </p>
+                <p>
+                  Dalam program <strong>English Conversation</strong>, saya mempelajari dasar-dasar berbicara dalam bahasa Inggris, termasuk bagaimana memulai dan menjaga percakapan dengan percaya diri, lancar, dan menyenangkan. Saya berlatih membuat small talk, bertukar informasi dengan sopan, relevan, dan jelas, serta merespons berbagai situasi sehari-hari secara efektif. Saya juga mengerjakan proyek praktis seperti simulasi percakapan untuk menerapkan keterampilan ini dalam berbagai konteks kehidupan nyata dan profesional.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate2"
+                  class="border-bottom border-primary text-decoration-none"
+                  >Tampilkan Sertifikat</a
+                >
+              </div>
+              <div class="position-relative mb-4">
+                <i
+                  class="far fa-dot-circle text-primary position-absolute"
+                  style="top: 2px; left: -32px"
+                ></i>
+                <h5 class="font-weight-bold mb-1">Volunteering to Teach English in Pelambuan</h5>
+                <p class="mb-2">
+                  <strong>Borneo Urban Lab</strong> | <small>2022 - 2023</small>
+                </p>
+                <p>
+                  Saya adalah bagian dari tim relawan yang <strong>mengajar bahasa Inggris</strong> kepada anak-anak di Pelambuan, Kalimantan Selatan. Kami berbagi pengetahuan untuk membantu mereka berbicara bahasa Inggris. Perjalanan ini menunjukkan betapa rajin, pekerja keras, dan antusiasnya mereka dalam mempelajari bahasa ini, dan kami bersyukur dapat berkontribusi pada perkembangan mereka.
+                </p>
+                <a
+                  href="#"
+                  id="viewCertificate4"
+                  class="border-bottom border-primary text-decoration-none"
+                  >Tampilkan Sertifikat</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Qualification End -->
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Skills
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            Keahlian
+          </h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">GIS Data Management with QGIS</h6>
+                <h6 class="font-weight-bold">90%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">FPV Drone Pilot</h6>
+                <h6 class="font-weight-bold">85%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="85"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">Microsoft Office Suite</h6>
+                <h6 class="font-weight-bold">80%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">Basic Networking</h6>
+                <h6 class="font-weight-bold">80%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">
+                  HTML, CSS, PHP, Bootstrap, Laravel
+                </h6>
+                <h6 class="font-weight-bold">80%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-dark"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div class="skill mb-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">Python, SQL, Tableau</h6>
+                <h6 class="font-weight-bold">75%</h6>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skill End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="service">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Freelance
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            Layanan
+          </h1>
+        </div>
+        <div class="row pb-3">
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-film service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Video Drone</h4>
+            </div>
+            <p>
+              Saya ahli dalam menciptakan pengalaman visual luar biasa dengan rekaman drone FPV, memberikan perspektif unik yang memperkaya proyek dan memperkuat citra perusahaan Anda
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup1', event)"
+              >Selengkapnya</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Web Developer</h4>
+            </div>
+            <p>
+              Fokus saya adalah menciptakan desain responsif dan ramah pengguna yang menggambarkan esensi merek Anda, sambil menarik perhatian dan melibatkan audiens.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup2', event)"
+              >Selengkapnya</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-layer-group service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Manajemen Data GIS</h4>
+            </div>
+            <p>
+              Dengan keahlian dalam manajemen GIS, saya menyediakan layanan ahli dan profesional dalam pembersihan serta pengelolaan data menggunakan QGIS.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup3', event)"
+              >Selengkapnya</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-table service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Pemasukan Data</h4>
+            </div>
+            <p>
+              Tingkatkan efisiensi bisnis Anda dengan layanan entri data cepat, akurat, dan terpercaya, yang mendorong hasil yang terukur.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup4', event)"
+              >Selengkapnya</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fas fa-2x fa-camera service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Foto Produk</h4>
+            </div>
+            <p>
+              Foto produk yang jelas, menarik, dan membuat barang Anda menonjol, menarik perhatian dengan mudah.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup5', event)"
+              >Selengkapnya</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-5">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+              <i
+                class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"
+              ></i>
+              <h4 class="font-weight-bold m-0">Membuat Konten</h4>
+            </div>
+            <p>
+              Buat konten menarik untuk brand Anda, dari video hingga postingan media sosial, untuk terhubung dengan audiens.
+            </p>
+            <a
+              class="border-bottom border-primary text-decoration-none"
+              href="#"
+              onclick="openPopup('popup6', event)"
+              >Selengkapnya</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Portfolio Start
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Gallery
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            My Portfolio
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center mb-2">
+            <ul class="list-inline mb-4" id="portfolio-flters">
+              <li
+                class="btn btn-sm btn-outline-primary m-1 active"
+                data-filter="*"
+              >
+                All
+              </li>
+              <li
+                class="btn btn-sm btn-outline-primary m-1"
+                data-filter=".first"
+              >
+                Design
+              </li>
+              <li
+                class="btn btn-sm btn-outline-primary m-1"
+                data-filter=".second"
+              >
+                Development
+              </li>
+              <li
+                class="btn btn-sm btn-outline-primary m-1"
+                data-filter=".third"
+              >
+                Marketing
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row portfolio-container">
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-1.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-2.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-3.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-4.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-5.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+            <div class="position-relative overflow-hidden mb-2">
+              <img
+                class="img-fluid rounded w-100"
+                src="img/portfolio-6.jpg"
+                alt=""
+              />
+              <div
+                class="portfolio-btn bg-primary d-flex align-items-center justify-content-center"
+              >
+                <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                  <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Testimonial Start-->
+
+    <div class="container-fluid py-5" id="testimonial">
+      <div class="container">
+        <div
+          class="position-relative d-flex align-items-center justify-content-center"
+        >
+          <h1
+            class="display-1 text-uppercase text-white"
+            style="-webkit-text-stroke: 1px #dee2e6"
+          >
+            Quotes
+          </h1>
+          <h1 class="position-absolute text-uppercase text-primary">
+            Kata Motivasi
+          </h1>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="owl-carousel testimonial-carousel">
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  Merasa kebingungan di awal adalah hal yang dialami oleh setiap orang. Yang benar-benar penting adalah tekad untuk terus maju dengan konsistensi dan komitmen.
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/testimonial-1.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Yusma</h5>
+                <a href="https://www.instagram.com/yusmafrlnc/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> yusmafrlnc</span>
+                </a>
+                
+              </div>
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  Pekerjaan bukan hanya tentang menghasilkan uang tetapi itu tentang menciptakan sesuatu yang bermakna. Ini tentang menemukan tujuan dalam setiap tugas, belajar dari perjalanan, dan meninggalkan dampak yang abadi bagi orang lain.
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/testimonial-2.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Rahmatillah</h5>
+                <a href="https://www.instagram.com/tlhrahmat/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> tlhrahmat</span>
+                </a>
+              </div>
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  Pekerjaan bukan sekadar tugas, melainkan kesempatan untuk berkembang, belajar, dan memberi dampak. Ini adalah platform di mana Anda dapat menantang diri sendiri, mengembangkan keterampilan baru, dan meninggalkan dampak positif pada dunia di sekitar Anda.
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/testimonial-3.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Aziz</h5>
+                <a href="https://www.instagram.com/aaziiz.z/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> aaziiz.z</span>
+                </a>
+              </div>
+              <div class="text-center">
+                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                <h4 class="font-weight-light mb-4">
+                  Ketika hasrat dan keterampilan berpadu, pekerjaan tidak hanya menjadi kebutuhan, tetapi juga cara hidup yang memuaskan. Pekerjaan menjadi sesuatu yang menginspirasi pertumbuhan, memicu kreativitas, dan memberi makna pada setiap hari.
+                </h4>
+                <img
+                  class="img-fluid rounded-circle mx-auto mb-3"
+                  src="img/yoga.jpg"
+                  style="width: 80px; height: 80px"
+                />
+                <h5 class="font-weight-bold m-0">Yoga</h5>
+                <a href="https://www.instagram.com/yogayuliga/" target="_blank">
+                  <span><i class="fab fa-instagram"> </i> yogayuliga</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Blog Start
+    <div class="container-fluid pt-5" id="blog">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Latest Blog</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Selengkapnya</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Selengkapnya</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Hubungi Saya</h1>
+            </div>
+            <div class="row g-5">
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <h2 class="mb-3 sembunyi">Let's get in touch</h3>
+                  <p class="mb-4">Mari mulai percakapan! Jika Anda memiliki pertanyaan, membutuhkan informasi lebih lanjut, atau memerlukan bantuan dengan proyek Anda, hubungi kami hari ini. Kami siap membantu dan sangat antusias untuk berdiskusi tentang bagaimana layanan kami dapat memberikan dampak positif pada tujuan Anda.</p>
+                  <div class="d-flex mb-4">
+                      <div class="flex-shrink-0 btn-bulat rounded-circle bg-primary text-white">
+                          <i class="fa fa-phone-alt"></i>
+                      </div>
+                      <div class="ms-1">
+                          <p class="mb-1 manual-padding-kiri">Hubungi Saya</p>
+                          <h5 class="mb-0 manual-padding-kiri">+62 819 5843 6679 </h5>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-4">
+                      <div class="flex-shrink-0 btn-bulat rounded-circle bg-primary text-white">
+                          <i class="fa fa-envelope"></i>
+                      </div>
+                      <div class="ms-3">
+                          <p class="mb-1 manual-padding-kiri">Email Saya</p>
+                          <h5 class="mb-0 manual-padding-kiri">yusmarahman09@gmail.com</h5>
+                      </div>
+                  </div>
+                  <div class="d-flex mb-0">
+                      <div class="flex-shrink-0 btn-bulat rounded-circle bg-primary text-white">
+                          <i class="fab fa-instagram"></i>
+                      </div>
+                      <div class="ms-3">
+                          <p class="mb-1 manual-padding-kiri">Instagram Saya</p>
+                          <h5 class="mb-0 manual-padding-kiri">@yusmafrlnc</h5>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <form>
+                    <div class="row g-3">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63730.137704589164!2d114.55301297691074!3d-3.3171349055801502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de4209aa1eec961%3A0x26030bfcc09204d2!2sBanjarmasin%2C%20Banjarmasin%20City%2C%20South%20Kalimantan!5e0!3m2!1sen!2sid!4v1731510743726!5m2!1sen!2sid" 
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="top" >
+                        </iframe>
+                    </div>
+                </form>
+            </div>            
+          </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5"
+    >
+      <div class="container text-center py-5">
+        <div class="d-flex justify-content-center mb-4">
+          <a class="btn btn-light btn-social mr-2" href="https://creativeloopid.blogspot.com/"
+            ><i class="fa-brands fa-blogger"></i></a>
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="https://www.facebook.com/yusma.gaul"
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="btn btn-light btn-social mr-2"
+            href="https://www.linkedin.com/in/yusmarahman09/"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-light btn-social"
+            href="https://www.instagram.com/yusmafrlnc/"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+       <!----> <div class="d-flex justify-content-center mb-3">
+          <a class="text-white" href="#">Privacy</a>
+          <span class="px-3">|</span>
+          <a class="text-white" href="#">Terms</a>
+          <span class="px-3">|</span>
+          <a class="text-white" href="#">FAQs</a>
+          <span class="px-3">|</span>
+          <a class="text-white" href="#">Help</a>
+        </div>
+        <p class="m-0">
+          &copy;
+          <a class="text-white font-weight-bold" href="#">Portfolio | Yusma Rahman</a> All
+          Rights Reserved. Designed by
+          <a class="text-white font-weight-bold" href="https://htmlcodex.com"
+            >HTML Codex</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+ <!-- Pop-up for Drone  -->
+<div class="popup" id="popup1">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup1')">&times;</span>
+    <h2>Video Drone</h2>
+    <!-- Menambahkan iframe untuk video YouTube -->
+    <div class="popup-video">
+      <iframe
+        id="youtube-video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/2oZ1GreRJxE?si=a-roy5FbBH7cNYfI"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p>
+      Sebagai seseorang yang terus mengasah keterampilan dalam pengambilan gambar drone FPV, saya mengkhususkan diri dalam menangkap bidikan udara yang memukau untuk proyek properti dan profil perusahaan. Dengan menggunakan peralatan drone canggih, saya fokus untuk menyajikan rekaman yang halus dan berkualitas tinggi, yang menonjolkan fitur unik properti real estat serta memberikan perspektif menarik untuk bisnis. Baik itu untuk menampilkan properti mewah yang dijual atau membuat profil perusahaan yang mengesankan, tujuan saya adalah menciptakan rekaman visual yang memikat dan meningkatkan dampak proyek Anda.
+    </p>
+    <a href="img/drone1.jpg" target="_blank">
+      <img src="img/drone1.jpg" class="popup-image" alt="Drone Image" />
+    </a>
+    <p>
+      Dalam proses ini, saya fokus untuk mengambil sudut terbaik, menangkap pemandangan luas, dan menonjolkan detail-detail yang sering terlewat dengan fotografi tradisional. Untuk proyek properti, saya pastikan untuk menonjolkan poin-poin penjualan utama seperti tata letak, pemandangan sekitar, dan estetika secara keseluruhan. Untuk profil perusahaan, saya bertujuan untuk menceritakan kisah merek Anda melalui visual udara yang menyoroti lokasi bisnis, fasilitas, dan lingkungan Anda. Meskipun saya masih dalam tahap pembelajaran, saya memastikan setiap pengambilan gambar dilakukan secara profesional untuk memenuhi standar tertinggi.
+    </p>
+    <a href="img/drone2.JPG" target="_blank">
+      <img src="img/drone2.JPG" class="popup-image" alt="Drone Image" />
+    </a>
+    <p>
+      Saya percaya bahwa rekaman drone FPV menawarkan cara yang dinamis dan menarik untuk mempersembahkan properti dan bisnis. Itulah sebabnya saya bekerja sama dengan klien untuk memahami visi mereka dan menyediakan rekaman yang selaras dengan tujuan mereka. Seiring saya terus menyempurnakan keterampilan saya, saya berkomitmen untuk memberikan Anda bidikan udara yang luar biasa yang akan meningkatkan daftar properti dan profil perusahaan Anda.
+    </p>
+    <p>
+      Jika Anda tertarik untuk mengeksplorasi lebih banyak video kami,
+      <a
+        href="https://www.youtube.com/@iyusfpv"
+        class="border-bottom border-primary"
+        target="_blank"
+        ><strong>klik di sini.</strong></a
+      >
+    </p>
+    
+    <!-- Tombol close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup1')" class="btn btn-secondary" style="width: 200px;">Tutup</button>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Pop-up for web Developer  -->
+    <div class="popup" id="popup2">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <h2>Web Developer</h2>
+        <img src="img/penin-1.JPG" alt="Drone Project" class="popup-image" />
+        <p>
+          Sebagai seorang pengembang web yang masih belajar, saya fokus pada pembuatan situs web yang ramah pengguna dan dapat diakses di berbagai perangkat. Saya berusaha memastikan setiap proyek yang saya kerjakan memiliki desain yang bersih dan modern, memberikan pengalaman pengguna yang menyenangkan. Setiap situs web yang saya buat dirancang dengan navigasi yang mudah, baik untuk pengunjung baru maupun pengguna tetap.
+        </p>
+        <img src="img/penin-3.JPG" alt="Drone Project" class="popup-image" />
+        <p>
+          Dalam proses pengembangan, saya bekerja dengan berbagai teknologi untuk membangun baik sisi front-end maupun back-end situs. Meskipun saya masih belajar, saya memastikan bahwa situs yang saya bangun cepat, responsif, dan berfungsi dengan lancar. Saya juga terus mencari cara untuk mengoptimalkan kinerja dan meningkatkan pengalaman pengguna, baik itu untuk blog pribadi, situs bisnis, atau toko online.
+        </p>
+        <img src="img/penin-2.JPG" alt="Drone Project" class="popup-image" />
+        <p>
+          Saya percaya bahwa setiap situs web harus disesuaikan untuk memenuhi kebutuhan spesifik penggunanya. Itulah sebabnya saya bekerja sama dengan klien untuk memahami tujuan mereka dan menciptakan solusi yang sesuai. Saya berkomitmen untuk terus meningkatkan keterampilan saya, agar dapat memberikan hasil yang lebih baik dan membantu Anda membangun kehadiran online yang kuat.
+        </p>
+        <h3>Projek Terbaru:</h3>
+        <ul>
+          <li>
+            <strong>Company Profile Website :</strong>
+            <a href="https://yusma1122.github.io/peninsula/" class="border-bottom border-primary text-decoration-none" target="_blank">Peninsula Abadi Company Profile</a>
+          </li>
+          <li>
+            <strong>Wasaka Museum :</strong>
+            <a href="https://yusma1122.github.io/wasaka-museum/" class="border-bottom border-primary text-decoration-none" target="_blank">Wasaka Museum Website</a>
+          </li>
+        </ul>
+        
+        <!-- Tombol close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup2')" class="btn btn-secondary" style="width: 200px;">Tutup</button>
+    </div>
+
+      </div>
+    </div>
+
+    <!-- Pop-up for GIS Adm  -->
+    <div class="popup" id="popup3">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <h2>Manajemen GIS</h2>
+        <a href="img/GIS-1.JPG" target="_blank">
+          <img src="img/GIS-1.JPG" class="popup-image" alt="GIS Image" />
+        </a>
+        <p>
+          Sebagai seseorang yang masih mengasah keterampilan dalam manajemen GIS, saya fokus pada pengorganisasian dan pembersihan data GIS untuk memastikan data tersebut akurat dan siap untuk dianalisis. Saya menggunakan berbagai alat untuk membantu membersihkan, mengorganisasi, dan memvalidasi informasi geografis, memastikan bahwa semua data yang saya tangani dapat diandalkan dan terstruktur dengan baik. Tujuan saya adalah memberikan Anda data yang bersih dan dapat digunakan, yang mudah diintegrasikan ke dalam proyek GIS apa pun.
+        </p>
+        <p>
+          Dalam proses ini, saya fokus pada tugas-tugas pembersihan data seperti menghapus duplikat, memperbaiki kesalahan, dan menstandarkan format. Hal ini membantu meningkatkan kualitas keseluruhan data, menjadikannya siap untuk digunakan dalam pengambilan keputusan, pemetaan, dan analisis spasial lainnya. Meskipun saya masih dalam tahap pembelajaran, saya berkomitmen untuk menjaga standar yang tinggi dan terus meningkatkan teknik saya untuk memastikan hasil terbaik.
+        </p>
+        <a href="img/GIS-2.jpg" target="_blank">
+          <img src="img/GIS-2.jpg" class="popup-image" alt="GIS Image" />
+        </a>
+        <p>
+          Saya percaya bahwa data GIS yang akurat dan dikelola dengan baik sangat penting untuk pengambilan keputusan yang efektif. Itulah mengapa saya bekerja sama dengan klien untuk memahami kebutuhan spesifik mereka dan memastikan bahwa data yang saya sediakan sesuai dengan alur kerja mereka. Saya sangat bersemangat untuk terus menyempurnakan keterampilan saya dalam manajemen GIS, sehingga saya dapat membantu Anda memaksimalkan potensi data geografis Anda dan mengoptimalkan penggunaannya.
+        </p>
+        <h3>Projek Terbaru:</h3>
+        <ul>
+          <li>
+            <strong>Local Policy Project :</strong> 
+            <a
+                href="#"
+                id="viewCertificate6"
+                class="border-bottom border-primary text-decoration-none"
+                >Middlesbrough Emerging Local Plan</a>
+          </li>
+          <li>
+            <strong>Site Allocation Project :</strong> 
+            <a href="img/doc/Liverpool SA.pdf" class="border-bottom border-primary text-decoration-none">Liverpool Site Allocation</a>
+          </li>
+        </ul>
+
+        <!-- Tombol close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup3')" class="btn btn-secondary" style="width: 200px;">Tutup</button>
+    </div>
+
+      </div>
+    </div>
+
+    <!-- Pop-up Data Entry  -->
+    <div class="popup" id="popup4">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup4')">&times;</span>
+        <h2>Pemasukan Data</h2>
+        <a href="img/popup4.JPG" target="_blank">
+          <img src="img/popup4.JPG" class="popup-image" alt="Data Entry" />
+        </a>
+        <p>
+          Saya berkomitmen untuk mengembangkan keterampilan saya dalam entri data, memastikan bahwa data yang saya tangani akurat, terorganisir dengan baik, dan siap untuk diproses lebih lanjut. Pekerjaan saya berfokus pada memasukkan dan memelihara data dengan teliti, memberikan informasi yang dapat diandalkan untuk mendukung proyek-proyek yang lebih besar.
+        </p>
+        <a href="img/data-entry1.JPG" target="_blank">
+          <img src="img/data-entry1.JPG" class="popup-image" alt="Data Entry" />
+        </a>
+        <p>
+          Dalam proses entri data saya, saya fokus pada akurasi dengan memverifikasi setiap entri secara menyeluruh, membandingkan informasi, dan mengikuti standar data yang telah ditetapkan. Pendekatan ini membantu meminimalkan kesalahan dan memastikan bahwa semua informasi diformat secara konsisten, sehingga lebih mudah digunakan untuk analisis, pelaporan, dan pengambilan keputusan. Meskipun masih terus mengasah keterampilan saya, saya mengutamakan akurasi dan konsistensi, serta terus meningkatkan teknik saya untuk memberikan hasil terbaik.
+        </p>
+        <a href="img/data-entry2.JPG" target="_blank">
+          <img src="img/data-entry2.JPG" class="popup-image" alt="Data Entry" />
+        </a>
+        <p>
+          Saya percaya bahwa entri data yang dikelola dengan baik merupakan dasar yang kuat untuk setiap proyek berbasis data. Untuk mencapainya, saya bekerja sama dengan klien untuk memahami kebutuhan spesifik mereka, memastikan bahwa data yang saya berikan dapat terintegrasi dengan lancar ke dalam alur kerja mereka. Mengembangkan keterampilan entri data saya tetap menjadi prioritas utama, yang memungkinkan saya untuk berkontribusi secara efektif pada proyek Anda dan membantu memaksimalkan nilai data Anda.
+        </p>
+        <h3>Project Terbaru:</h3>
+        <ul>
+          <li>
+            <a
+              href="https://docs.google.com/spreadsheets/d/12y6jOpVtpkYC4eFXOmj269ykW7VwGPXCM-STXsF_1Wg/edit?gid=45035415#gid=45035415"
+              target="_blank"
+              ><strong>UK Council Boundary Extraction</strong></a
+            >
+            Mengambil data batas wilayah dari berbagai dewan di Inggris untuk analisis spasial dan pemetaan yang akurat.
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/spreadsheets/d/12y6jOpVtpkYC4eFXOmj269ykW7VwGPXCM-STXsF_1Wg/edit?gid=1443587580#gid=1443587580"
+              target="_blank"
+              ><strong>Manual Data Scraping from UK Websites</strong></a
+            >
+            Proses pengumpulan data secara manual dari berbagai situs web di Inggris, dengan pengecekan yang teliti untuk memastikan bahwa data yang diambil akurat dan memenuhi persyaratan analisis.
+          </li>
+        </ul>
+
+        <!-- Tombol close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup4')" class="btn btn-secondary" style="width: 200px;">Tutup</button>
+    </div>
+
+
+      </div>
+    </div>
+
+    <!-- Pop-up for Product Photo  -->
+    <div class="popup" id="popup5">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup5')">&times;</span>
+        <h2>Foto Produk</h2>
+
+        <!-- Slideshow Container -->
+
+        <div class="product-slideshow-container">
+          <div class="product-slide product-slide-1">
+            <!-- Slide pertama untuk slideshow 1 -->
+            <img src="img/nike1.JPG" class="popup-image" alt="Nike Product 1" />
+            <div class="product-text">Nike Blazer Low 77 - Black</div>
+          </div>
+          <div class="product-slide product-slide-1">
+            <!-- Slide pertama untuk slideshow 1 -->
+            <img src="img/nike2.JPG" class="popup-image" alt="Nike Product 1" />
+            <div class="product-text">Nike Blazer Low 77 - Black</div>
+          </div>
+          <div class="product-slide product-slide-1">
+            <!-- Slide pertama untuk slideshow 1 -->
+            <img src="img/nike3.JPG" class="popup-image" alt="Nike Product 1" />
+            <div class="product-text">Nike Blazer Low 77 - Black</div>
+          </div>
+          <!-- Slide lainnya untuk slideshow 1 -->
+          <a class="product-prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+          <a class="product-next" onclick="plusSlides(1, 1)">&#10095;</a>
+          <div class="product-slide-number" id="slide-number-1"></div>
+        </div>
+
+        <p>
+          Meskipun fotografi produk bukanlah bidang utama saya, ini adalah sesuatu yang saya minati dan nikmati untuk dijelajahi. Apa yang dimulai sebagai hobi kini berkembang menjadi kesempatan untuk menangkap produk Anda dengan cara yang menonjolkan fitur terbaik mereka. Saya fokus untuk menciptakan foto yang bersih, tajam, dan menarik yang menampilkan produk Anda dengan cara yang paling menarik.
+        </p>
+        <p>
+          Saya sangat memperhatikan agar setiap gambar terkomposisi dengan baik, dengan perhatian pada pencahayaan dan detail yang akan membuat produk Anda menonjol. Meskipun saya masih belajar dan menyempurnakan keterampilan saya, saya berkomitmen untuk menghasilkan gambar yang tidak hanya indah, tetapi juga efektif untuk kebutuhan pemasaran atau penjualan Anda.
+        </p>
+
+        <div class="product-slideshow-container">
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi1.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi2.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi3.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi4.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <div class="product-slide product-slide-2">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/topi5.JPG" class="popup-image" alt="Nike Product 2" />
+            <div class="product-text">PING Golf Hat - White</div>
+          </div>
+          <!-- Slide lainnya untuk slideshow 1 -->
+          <a class="product-prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+          <a class="product-next" onclick="plusSlides(1, 2)">&#10095;</a>
+          <div class="product-slide-number" id="slide-number-2"></div>
+        </div>
+
+        <p>
+          Bagi saya, ini tentang menciptakan foto yang membuat produk Anda bersinar, apakah itu untuk toko online, media sosial, atau materi promosi lainnya. Saya selalu terbuka untuk tantangan dan kolaborasi baru, membawa mata kreatif saya ke setiap pemotretan dengan antusiasme.
+        </p>
+        <p>
+          Dengan bekerja sama, saya dapat membantu menghidupkan produk Anda melalui fotografi, dan siapa tahu—apa yang dimulai sebagai hobi bisa saja berkembang menjadi sesuatu yang lebih!
+        </p>
+
+        <div class="product-slideshow-container">
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch1.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch2.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch3.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <div class="product-slide product-slide-3">
+            <!-- Slide pertama untuk slideshow 2 -->
+            <img src="img/produk/torch4.JPG" class="popup-image" alt="Torch pouch" />
+            <div class="product-text">Torch Pouch - Black</div>
+          </div>
+          <!-- Slide lainnya untuk slideshow 1 -->
+          <a class="product-prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+          <a class="product-next" onclick="plusSlides(1, 3)">&#10095;</a>
+          <div class="product-slide-number" id="slide-number-3"></div>
+        </div>
+
+        <h3>Projek Terbaru:</h3>
+        <ul>
+          <li><strong>Nike Blezer Low 77</strong> : Sepatu</li>
+          <li><strong>PING Golf Hat</strong> : Topi</li>
+          <li><strong>Torch Pouch</strong> : Tas</li>
+        </ul>
+
+        <!-- Tombol close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup5')" class="btn btn-secondary" style="width: 200px;">Tutup</button>
+    </div>
+
+
+      </div>
+    </div>
+
+    <!-- Pop-up for Content Creating  -->
+    <div class="popup" id="popup6">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup6')">&times;</span>
+        <h2>Membuat Konten</h2>
+        <a href="img/content-creation.png" target="_blank">
+          <img
+            src="img/content-creation.png"
+            class="popup-image"
+            alt="Content Creating"
+          />
+        </a>
+        <p>
+          Sebagai seseorang yang masih mengasah keterampilan saya dalam pembuatan konten sebagai hobi, saya fokus pada pengembangan konten yang menarik dan terstruktur dengan baik, yang dapat menyentuh pembaca dan mencerminkan minat pribadi saya. Meskipun saya bukan seorang profesional di bidang ini, saya sangat menikmati bereksperimen dengan berbagai jenis konten dan terus memperbaiki keterampilan saya. Tujuan saya adalah menciptakan konten yang menceritakan sebuah kisah dan menarik perhatian orang-orang yang menemukannya.
+        </p>
+        <a href="img/content-creation2.png" target="_blank">
+          <img
+            src="img/content-creation2.png"
+            class="popup-image"
+            alt="Content Creating"
+          />
+        </a>
+        <p>
+          Dalam prosesnya, saya menikmati sesi brainstorming ide, menulis postingan yang menarik, dan mengedit karya saya agar menjadi semulus mungkin. Saya menciptakan konten yang memiliki makna bagi saya dan, saya harap, juga bagi pembaca saya. Meskipun saya masih dalam tahap belajar, saya sangat bersemangat untuk terus menyempurnakan pendekatan saya dan secara konsisten menghasilkan postingan blog yang baru dan menarik.
+        </p>
+        <a href="img/content-creation3.png" target="_blank">
+          <img
+            src="img/content-creation3.png"
+            class="popup-image"
+            alt="Content Creating"
+          />
+        </a>
+        <p>
+          Saya percaya bahwa berbagi ide dan pengalaman melalui tulisan dapat menciptakan koneksi berharga dengan orang lain. Itulah sebabnya saya membangun sebuah blog di mana saya secara rutin memposting artikel-artikel menarik dan penuh pemikiran yang mencerminkan minat dan kreativitas saya. Anda bisa menjelajahi perjalanan saya dan melihat karya yang saya banggakan di  
+          <a
+            href="https://creativeloopid.blogspot.com/"
+            class="border-bottom border-primary"
+            target="_blank"
+            >Creative Loop ID</a
+          > Saya sangat antusias untuk terus mengeksplorasi penciptaan konten dan berbagi hasrat saya dengan orang lain seiring saya berkembang dalam hobi ini.
+        </p>
+        <h3>Projek Terbaru:</h3>
+        <ul>
+          <li>
+            <a href="https://creativeloopid.blogspot.com/">
+              <strong>Tech Blog</strong> 
+            </a>
+            : Saya mengelola sebuah blog teknologi di mana saya berbagi wawasan, ulasan, dan tips tentang berbagai topik teknologi. Berpadu dengan kecintaan saya terhadap teknologi, tujuan saya adalah untuk membuatnya lebih mudah dipahami dan menarik bagi pembaca. Kunjungi blog saya di
+            <a
+              href="https://creativeloopid.blogspot.com/"
+              class="border-bottom border-primary"
+              >Creative Loop ID.</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tombol close di Footer -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button onclick="closePopup('popup6')" class="btn btn-secondary" style="width: 200px;">Tutup</button>
+    </div>
+
+      </div>
+    </div>
+
+    <!--Ini adalah untuk slide gambar-->
+
+    <!-- Modal Slide Sertifikat Responsive Web Design-->
+    <div
+      class="modal fade"
+      id="certificateModal"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img
+              src="img/sertifikat/dqlab.jpg"
+              alt="Certificate"
+              class="img-fluid"
+            />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat LIA Conversation -->
+    <div
+      class="modal fade"
+      id="certificateModal2"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel2">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/LIA Yusma.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat kada tahu -->
+    <div
+      class="modal fade"
+      id="certificateModal3"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/Techforeveryone.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat -->
+    <div
+      class="modal fade"
+      id="certificateModal4"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/pelambuan.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Sertifikat GIS ADministrator -->
+    <div
+      class="modal fade"
+      id="certificateModal5"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Certificate</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/sertifikat/gis.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Slide Projek GIS 1 -->
+    <div
+      class="modal fade"
+      id="certificateModal6"
+      tabindex="-1"
+      aria-labelledby="certificateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="certificateModalLabel">Middlesbrough Emerging Local Plan</h5>
+          </div>
+          <div class="modal-body">
+            <!-- Sertifikat (gambar atau teks) bisa ditampilkan di sini -->
+            <img src="img/Middlesborough.jpg" alt="Certificate" class="img-fluid" />
+            <!-- Atau jika hanya teks -->
+            <!-- <p>Your certificate details or text goes here.</p> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!--Online-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
